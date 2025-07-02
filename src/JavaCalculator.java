@@ -124,7 +124,22 @@ public class JavaCalculator {
         btnEquals.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                total2 = total1 + Double.parseDouble(textDisplay.getText());
+                switch (math_operator){
+                    case '+':
+                        total2 = total1 + Double.parseDouble(textDisplay.getText());
+                        break;
+
+                    case '-':
+                        total2 = total1 - Double.parseDouble(textDisplay.getText());
+                        break;
+
+                    case '*':
+                        total2 = total2 * Double.parseDouble(textDisplay.getText());
+                        break;
+                    case '/':
+                        total2 = total2 / Double.parseDouble(textDisplay.getText());
+                        break;
+                }
                 textDisplay.setText(Double.toString(total2));
                 total1 = 0;
             }
