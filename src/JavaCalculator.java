@@ -127,6 +127,13 @@ public class JavaCalculator {
                 total1 = 0;
             }
         });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                total2 = 0;
+                textDisplay.setText("");
+            }
+        });
     }
 
     public static void main(String[] args) {
