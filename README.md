@@ -16,7 +16,7 @@ A simple GUI-based calculator built using Java Swing. This calculator performs b
 
 ## 📷 Screenshot (Optional)
 
-> *(Insert a screenshot of the GUI if available)*
+![Calculator Screenshot](screenshot.png)
 
 ## 🛠️ How It Works
 
