@@ -14,7 +14,7 @@ A simple GUI-based calculator built using Java Swing. This calculator performs b
 - Clear button to reset the display
 - Organized layout for easy interaction
 
-## 📷 Screenshot (Optional)
+## 📷 Screenshot
 
 ![Calculator Screenshot](screenshot.png)
 
