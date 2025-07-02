@@ -167,6 +167,13 @@ public class JavaCalculator {
                 getOperator(button_text);
             }
         });
+        btnDivide.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = btnDivide.getText();
+                getOperator(button_text);
+            }
+        });
     }
 
     private void getOperator(String btnText){
