@@ -3,6 +3,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class JavaCalculator {
+
+    private double total1 = 0.0;
+    private double total2 = 0.0;
+
+
     private JPanel JavaCalculator;
     private JTextField textDisplay;
     private JButton btnEquals;
@@ -105,6 +110,21 @@ public class JavaCalculator {
         });
 
 
+        btnPlus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                total1 += Double.parseDouble(textDisplay.getText());
+                textDisplay.setText("");
+            }
+        });
+
+
+        btnEquals.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public static void main(String[] args) {
