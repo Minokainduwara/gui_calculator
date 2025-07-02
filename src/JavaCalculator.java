@@ -7,6 +7,8 @@ public class JavaCalculator {
     private double total1 = 0.0;
     private double total2 = 0.0;
 
+    private char math_operator;
+
 
     private JPanel JavaCalculator;
     private JTextField textDisplay;
@@ -113,8 +115,8 @@ public class JavaCalculator {
         btnPlus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                total1 += Double.parseDouble(textDisplay.getText());
-                textDisplay.setText("");
+                String button_text = btnPlus.getText();
+                getOperator(button_text);
             }
         });
 
@@ -134,6 +136,43 @@ public class JavaCalculator {
                 textDisplay.setText("");
             }
         });
+        btnPoint.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (textDisplay.getText().equals("")) {
+                    textDisplay.setText("0");
+                } else if (textDisplay.getText().contains(".")) {
+                    btnPoint.setEnabled(false);
+                }
+
+                else{
+                    String btnPointText = textDisplay.getText() + btnPoint.getText();
+                    textDisplay.setText(btnPointText);
+                }
+
+                btnPoint.setEnabled(true);
+            }
+        });
+        btnMinus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = btnMinus.getText();
+                getOperator(button_text);
+            }
+        });
+        btnMulti.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String button_text = btnMulti.getText();
+                getOperator(button_text);
+            }
+        });
+    }
+
+    private void getOperator(String btnText){
+        math_operator = btnText.charAt(0);
+        total1 = total1 + Double.parseDouble(textDisplay.getText());
+        textDisplay.setText("");
     }
 
     public static void main(String[] args) {
